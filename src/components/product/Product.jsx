@@ -11,39 +11,38 @@ const Product = () => {
     };
     const { data, isLoading, error } = useGetProductQuery();
     const lists = data?.map((product) => (
-        <div className="w-[296px] " key={product.id}>
-            <div className="bg-[#F0EEED] w-full h-[296px] overflow-hidden rounded-[20px]">
+        <div className="" key={product.id}>
+            <div className="bg-[#F0EEED] w-full h-[145px] min-[490px]:h-[200px] min-[600px]:h-[240px] lg:h-[260px] xl:h-[300px] overflow-hidden rounded-[20px]">
                 <Swiper
                     effect={"flip"}
                     grabCursor={true}
                     pagination={true}
                     navigation={false}
                     modules={[EffectFlip, Pagination, Navigation]}
-                    className="mySwiper bg-[#F0EEED] w-full h-[296px] rounded-[20px]">
+                    className="mySwiper bg-[#F0EEED] w-full lg:h-[300px] rounded-[20px]">
                     <SwiperSlide className="flex items-center justify-center">
                         <img
-                            className="w-[270px] h-[270px] object-contain hover:scale-105 transition-all"
+                            className="min-[600px]:h-[220px] min-[600px]:w-[220px] w-[140px] h-[140px] min-[490px]:h-[180px] min-[490px]:w-[180px] lg:w-[240px] xl:w-[280px] xl:h-[280px] lg:h-[240px] object-contain hover:scale-105 transition-all"
                             src={product.url[0]}
                         />
                     </SwiperSlide>
                     <SwiperSlide className="flex items-center justify-center">
                         <img
-                            className="w-[270px] h-[270px] object-contain hover:scale-105 transition-all"
+                            className="min-[600px]:h-[220px] min-[600px]:w-[220px] w-[140px] h-[140px] min-[490px]:h-[180px] min-[490px]:w-[180px] lg:w-[240px] xl:w-[280px] xl:h-[280px] lg:h-[240px] object-contain hover:scale-105 transition-all"
                             src={product.url[1]}
                         />
                     </SwiperSlide>
                     <SwiperSlide className="flex items-center justify-center">
                         <img
-                            className="w-[270px] h-[270px] object-contain hover:scale-105 transition-all"
+                            className="min-[600px]:h-[220px] min-[600px]:w-[220px] w-[140px] h-[140px] min-[490px]:h-[180px] min-[490px]:w-[180px] lg:w-[240px] xl:w-[280px] xl:h-[280px] lg:h-[240px] object-contain hover:scale-105 transition-all"
                             src={product.url[2]}
                         />
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <h2 className="text-xl font-bold mb-2 mt-2">
+            <h2 className="text-lg lg:text-xl font-bold mb-2 mt-2">
                 {product.title.charAt(0).toUpperCase() + product.title.slice(1)}
             </h2>
-            <p>{product.desc}</p>
             <p className="text-base text-neutral-500 mb-2 flex items-center gap-x-2">
                 <ReactStars
                     count={5}
@@ -60,7 +59,9 @@ const Product = () => {
     return (
         <div>
             {isLoading && <Skleton />}
-            <div className="flex flex-wrap justify-between">{lists}</div>
+            <div className="grid grid-cols-2 gap-x-2 lg:grid-cols-4 xl:gap-x-10 gap-y-3">
+                {lists}
+            </div>
         </div>
     );
 };
