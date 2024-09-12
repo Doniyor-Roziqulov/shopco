@@ -16,6 +16,7 @@ const Product = () => {
             <h2 className="text-xl font-bold mb-2 mt-2">
                 {product.title.charAt(0).toUpperCase() + product.title.slice(1)}
             </h2>
+            <p>{product.desc}</p>
             <p className="text-base text-neutral-500 mb-2">
                 Rating ({product.rating})
             </p>
