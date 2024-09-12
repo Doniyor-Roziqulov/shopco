@@ -1,8 +1,13 @@
 import { useGetProductQuery } from "@/context/api/product-api";
 import React from "react";
 import Skleton from "../skleton/Skleton";
+import ReactStars from "react-stars";
+import { render } from "react-dom";
 
 const Product = () => {
+    const ratingChanged = (newRating) => {
+        console.log(newRating);
+    };
     const { data, isLoading, error } = useGetProductQuery();
     const lists = data?.map((product) => (
         <div className="w-[296px] " key={product.id}>
@@ -17,8 +22,14 @@ const Product = () => {
                 {product.title.charAt(0).toUpperCase() + product.title.slice(1)}
             </h2>
             <p>{product.desc}</p>
-            <p className="text-base text-neutral-500 mb-2">
-                Rating ({product.rating})
+            <p className="text-base text-neutral-500 mb-2 flex items-center gap-x-2">
+                <ReactStars
+                    count={5}
+                    onChange={ratingChanged}
+                    size={24}
+                    color2={"#ffd700"}
+                />
+                ({product.rating})
             </p>
             <p className="text-2xl font-bold">$ {product.price}</p>
         </div>
