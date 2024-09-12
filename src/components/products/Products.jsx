@@ -4,7 +4,7 @@ import Product from "../product/Product";
 const Products = () => {
     return (
         <section className="pt-[72px]">
-            <div className="container mx-auto max-w-[1280px] px-5">
+            <div className="container">
                 <div className="border-b">
                     <h2 className="text-5xl font-bold text-center mb-14">
                         NEW ARRIVALS
