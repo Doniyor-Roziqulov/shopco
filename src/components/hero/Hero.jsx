@@ -8,6 +8,7 @@ const Hero = () => {
                 <div>
                     <div>
                         <h2>Hero</h2>
+                        <h3>hello</h3>
                     </div>
                 </div>
                 <div></div>
