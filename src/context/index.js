@@ -6,6 +6,7 @@ export const store = configureStore({
         // wishlist,
         // cart,
         // token,
+        // profile,
         [api.reducerPath]: api.reducer, // caching
     },
     middleware: (getDefaultMiddleware) =>

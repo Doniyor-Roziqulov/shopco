@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
-// import { logout } from '../slices/authSlice';
 
 const baseQuery = async (args, api, extraOptions) => {
     const { dispatch } = api;
@@ -28,6 +27,6 @@ const baseQueryWithRetry = retry(baseQuery, { maxRetries: 1 });
 export const api = createApi({
     reducerPath: "myApi",
     baseQuery: baseQueryWithRetry,
-    tagTypes: ["Users"], // o'zgaradi
+    tagTypes: ["Product"], // o'zgaradi
     endpoints: () => ({}),
 });
