@@ -7,7 +7,7 @@ const Header = () => {
     <>
       <Baner />
       <header className="py-6">
-        <div className="container flex items-center">
+        <div className="container flex items-center justify-center">
           <Link className="mr-10 hover:opacity-80 active:opacity-65" to={"/"}>
             <img src="/public/logo.svg" alt="Logo icon" />
           </Link>
