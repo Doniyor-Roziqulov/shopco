@@ -2,7 +2,8 @@ import { useGetProductQuery } from "@/context/api/product-api";
 import React from "react";
 import Skleton from "../skleton/Skleton";
 import ReactStars from "react-stars";
-import { render } from "react-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 const Product = () => {
     const ratingChanged = (newRating) => {
@@ -11,12 +12,33 @@ const Product = () => {
     const { data, isLoading, error } = useGetProductQuery();
     const lists = data?.map((product) => (
         <div className="w-[296px] " key={product.id}>
-            <div className="bg-[#F0EEED] w-full h-[296px] p-5 rounded-[20px]">
-                <img
-                    className="w-full h-full object-contain hover:scale-105 transition-all"
-                    src={product.url[0]}
-                    alt=""
-                />
+            <div className="bg-[#F0EEED] w-full h-[296px] overflow-hidden rounded-[20px]">
+                <Swiper
+                    effect={"flip"}
+                    grabCursor={true}
+                    pagination={true}
+                    navigation={false}
+                    modules={[EffectFlip, Pagination, Navigation]}
+                    className="mySwiper bg-[#F0EEED] w-full h-[296px] rounded-[20px]">
+                    <SwiperSlide className="flex items-center justify-center">
+                        <img
+                            className="w-[270px] h-[270px] object-contain hover:scale-105 transition-all"
+                            src={product.url[0]}
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide className="flex items-center justify-center">
+                        <img
+                            className="w-[270px] h-[270px] object-contain hover:scale-105 transition-all"
+                            src={product.url[1]}
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide className="flex items-center justify-center">
+                        <img
+                            className="w-[270px] h-[270px] object-contain hover:scale-105 transition-all"
+                            src={product.url[2]}
+                        />
+                    </SwiperSlide>
+                </Swiper>
             </div>
             <h2 className="text-xl font-bold mb-2 mt-2">
                 {product.title.charAt(0).toUpperCase() + product.title.slice(1)}
