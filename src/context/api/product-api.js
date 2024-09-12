@@ -1,8 +1,8 @@
-import { api } from "../index";
+import { api } from "./index";
 
 export const productApi = api.injectEndpoints({
     endpoints: (build) => ({
-        getProducts: build.query({
+        getProduct: build.query({
             query: (params) => ({
                 url: "/product",
                 params,
@@ -42,8 +42,9 @@ export const productApi = api.injectEndpoints({
 });
 
 export const {
-    useGetProductsQuery,
     useCreateProductMutation,
-    useDeleteProductMutation,
     useUpdateProductMutation,
+    useDeleteProductMutation,
+    useGetProductQuery,
+    useGetProductByIdQuery,
 } = productApi;
