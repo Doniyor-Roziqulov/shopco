@@ -7,10 +7,10 @@ import React from "react";
 const Home = () => {
     return (
         <div>
-            {/* <Hero /> */}
+            <Hero />
             <Products />
             <Dress />
-            {/* <Happy /> */}
+            <Happy />
         </div>
     );
 };
