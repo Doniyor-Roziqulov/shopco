@@ -1,18 +1,8 @@
 import React from "react";
-import { lists } from "@/static";
-
-const pro = lists.map((e, inx) => (
-    <div className="relative rounded-xl xl:h-80 bg-white" key={inx}>
-        <img
-            className="w-full h-full rounded-xl hover:scale-105 transition-all"
-            src={e.url}
-            alt=""
-        />
-        <p className="text-2xl font-bold absolute top-[16px] left-[24px]">
-            {e.title}
-        </p>
-    </div>
-));
+import img1 from "@/images/men1.png";
+import img2 from "@/images/men2.png";
+import img3 from "@/images/men3.png";
+import img4 from "@/images/men4.png";
 
 const Dress = () => {
     return (
@@ -22,8 +12,47 @@ const Dress = () => {
                     <h2 className="text-3xl text-center lg:text-5xl font-bold mb-5">
                         BROWSE BY DRESS STYLE
                     </h2>
-                    <div className="grid grid-cols-1 gap-y-5 min-[800px]:grid-cols-2 gap-x-3 lg:gap-y-7 lg:gap-x-7">
-                        {pro}
+                    <div className="grid grid-cols-1 gap-y-5 min-[800px]:grid-cols-3 min-[800px]:gap-x-3 lg:gap-y-7 lg:gap-x-7">
+                        <div className="relative w-full rounded-xl xl:h-80 bg-white">
+                            <img
+                                className="w-full h-full object-cover rounded-xl hover:scale-105 transition-all"
+                                src={img1}
+                                alt=""
+                            />
+                            <p className="text-2xl font-bold absolute top-[16px] left-[24px]">
+                                Casual
+                            </p>
+                        </div>
+                        <div className="relative rounded-xl xl:h-80 bg-white col-span-2">
+                            <img
+                                className="ml-auto w-10/12 h-full rounded-xl hover:scale-105 transition-all"
+                                src={img2}
+                                alt=""
+                            />
+                            <p className="text-2xl font-bold absolute top-[16px] left-[24px]">
+                                Formal
+                            </p>
+                        </div>
+                        <div className="relative rounded-xl xl:h-80 bg-white col-span-2">
+                            <img
+                                className="ml-auto w-10/12 h-full rounded-xl hover:scale-105 transition-all"
+                                src={img3}
+                                alt=""
+                            />
+                            <p className="text-2xl font-bold absolute top-[16px] left-[24px]">
+                                Party
+                            </p>
+                        </div>
+                        <div className="relative w-full rounded-xl xl:h-80 bg-white">
+                            <img
+                                className="w-full h-full object-cover rounded-xl hover:scale-105 transition-all"
+                                src={img4}
+                                alt=""
+                            />
+                            <p className="text-2xl font-bold absolute top-[16px] left-[24px]">
+                                Gym
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
