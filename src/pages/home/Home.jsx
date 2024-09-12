@@ -1,7 +1,7 @@
-import Dress from "@/components/dress/Dress";
 import Happy from "@/components/happy/Happy";
-import Hero from "@/components/hero/Hero";
 import Products from "@/components/products/Products";
+import Dress from "@/components/dress/Dress";
+import Hero from "@/components/hero/Hero";
 import React from "react";
 
 const Home = () => {
@@ -9,8 +9,8 @@ const Home = () => {
         <div>
             <Hero />
             <Products />
-            <Dress />
-            <Happy />
+             <Dress />
+            <Happy/>
         </div>
     );
 };
