@@ -6,7 +6,9 @@ const Hero = () => {
         <div>
             <div>
                 <div>
-                    
+                    <div>
+                        <h2>Hero</h2>
+                    </div>
                 </div>
                 <div></div>
             </div>
