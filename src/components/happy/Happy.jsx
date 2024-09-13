@@ -4,9 +4,6 @@ import ticket from "../../assets/ticket.svg";
 import { Pagination } from "antd";
 
 const Happy = () => {
-    // const onShowSizeChange = (current, pagesize) => {
-
-    // }
     const App = () => <Pagination defaultCurrent={1} total={50} />;
     return (
         <>
