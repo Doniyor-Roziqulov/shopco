@@ -11,9 +11,7 @@ import 'swiper/css/navigation';
 const Home = () => {
     return (
         <div>
-            <Hero />
             <Animate/>
-            <Products/>
             <Happy/>
             <Hero />
             <Products />
