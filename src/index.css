@@ -5,3 +5,43 @@
 .ant-select-selection-item {
     font-size: 16px;
 }
+
+/* @keyframes slide {
+  to {
+    left: -200px;
+  }
+}
+
+.imagess{
+  left: 0;
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+} */
+
+
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-80%);
+  }
+}
+
+.logos-slide{
+  animation: 15s slide infinite linear;
+  overflow: hidden;
+  display: inline-flex;
+
+  /* -webkit-mask-image: linear-gradient(90deg, transparent, #fff); */
+}
+
+
+.logos{
+  white-space: nowrap;
+  overflow: hidden;
+} 
+
