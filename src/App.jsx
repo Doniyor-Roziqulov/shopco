@@ -2,6 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./pages/layout/Layout";
 import Home from "./pages/home/Home";
+import 'swiper/css';
+import 'swiper/css/navigation';
 import "swiper/css";
 import "swiper/css/effect-flip";
 import "swiper/css/pagination";
