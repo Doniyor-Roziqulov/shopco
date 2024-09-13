@@ -1,5 +1,7 @@
 import Animate from "@/components/animate/Animate";
 import Happy from "@/components/happy/Happy";
+import Products from "@/components/products/Products";
+import Dress from "@/components/dress/Dress";
 import Hero from "@/components/hero/Hero";
 import Products from "@/components/products/Products";
 import React from "react";
@@ -13,6 +15,10 @@ const Home = () => {
             <Animate/>
             <Products/>
             <Happy/>
+            <Hero />
+            <Products />
+            <Dress />
+            <Happy />
         </div>
     );
 };

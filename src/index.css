@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .ant-select-selection-item {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 /* @keyframes slide {
