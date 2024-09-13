@@ -8,8 +8,8 @@ import React from "react";
 const Home = () => {
     return (
         <div>
-            <Animate />
             <Hero />
+            <Animate />
             <Products />
             <Dress />
             <Happy />

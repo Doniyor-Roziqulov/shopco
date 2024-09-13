@@ -37,7 +37,7 @@ const Hero = () => {
                                     Internonal Brands
                                 </p>
                             </div>
-                            <div className="w-[1px] h-[74px] bg-[rgb(218,217,217)]"></div>
+                            <div className="w-[2px] border border-[#dad9d9] h-[74px]"></div>
                             <div className="">
                                 <h3 className="font-bold text-[54px] leading-[54px]">
                                     2,000+
@@ -46,7 +46,7 @@ const Hero = () => {
                                     High-Quality Products
                                 </p>
                             </div>
-                            <div className="w-[1px] h-[74px] bg-[rgb(218,217,217)]"></div>
+                            <div className="w-[2px] border border-[#dad9d9] h-[74px]"></div>
                             <div className="">
                                 <h3 className="font-bold text-[54px] leading-[54px]">
                                     30,000+
@@ -69,18 +69,18 @@ const Hero = () => {
                             src={vector}
                             alt=""
                         />
-                        <div className="w-[1px] h-[74px] bg-[rgb(218,217,21)]"></div>
-                        <div className="">
+                        {/* <div className="w-[1px] h-[74px] bg-[rgb(218,217,21)]"></div> */}
+                        {/* <div className="">
                             <h3 className="font-bold text-[54px] leading-[54px]">
                                 30,000+
                             </h3>
                             <p className="pb-5 text-[16px] leading-[22.14px]">
                                 Happy Customers
                             </p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
-                <div className="flex ">
+                {/* <div className="flex ">
                     <img className="w-[500px]" src={hero} alt="" />
                     <img
                         className="absolute right-[200px]"
@@ -92,7 +92,7 @@ const Hero = () => {
                         src={vector}
                         alt=""
                     />
-                </div>
+                </div> */}
             </div>
         </>
     );
