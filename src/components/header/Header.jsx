@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import Baner from "../baner/Baner";
+import logo from "../../../public/logo.svg";
 
 const Header = () => {
     return (
@@ -11,7 +12,7 @@ const Header = () => {
                     <Link
                         className="mr-10 hover:opacity-80 active:opacity-65"
                         to={"/"}>
-                        <img src="/public/logo.svg" alt="Logo icon" />
+                        <img src={logo} alt="Logo icon" />
                     </Link>
 
                     <Navbar />
