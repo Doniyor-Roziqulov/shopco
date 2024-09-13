@@ -5,7 +5,7 @@ export default {
     theme: {
         container: {
             center: true,
-            padding: "2rem",
+            padding: "1rem",
             "2xl": "1520px",
         },
         extend: {

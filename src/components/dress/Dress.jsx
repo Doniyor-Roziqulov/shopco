@@ -7,8 +7,8 @@ import img4 from "@/images/men4.png";
 const Dress = () => {
     return (
         <section>
-            <div className="container">
-                <div className="bg-[#F0F0F0] px-3 pb-4 pt-8 min-[550px]:px-5 lg:px-10 lg:pb-16 lg:pt-12 xl:px-20 rounded-xl">
+            <div className="container max-w-[1280px]">
+                <div className="bg-[#F0F0F0] px-3 pb-4 pt-8 min-[550px]:px-5 lg:px-10 lg:pb-16 lg:pt-12 xl:px-14 rounded-xl">
                     <h2 className="text-3xl text-center lg:text-5xl font-bold mb-5">
                         BROWSE BY DRESS STYLE
                     </h2>
