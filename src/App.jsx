@@ -6,14 +6,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-flip";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
+import Cart from "./pages/cart/Cart";
+import Admin from "./pages/admin/Admin";
+import Wishlist from "./pages/wishlist/Wishlist";
+import Detail from "./pages/detail/Detail";
 
 const App = () => {
     return (
         <>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route path="/" element={<Home />} />
+                    <Route index element={<Home />} />
+                    <Route path="cart" element={<Cart/>}/>
+                    <Route path="admin" element={<Admin/>}/>
+                    <Route path="wishlist" element={<Wishlist/>}/>
+                    <Route path="detail" element={<Detail/>}/>
                 </Route>
+                
             </Routes>
         </>
     );
