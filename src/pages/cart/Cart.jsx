@@ -1,20 +1,15 @@
-import Footer from '@/components/footer/Footer'
-import Header from '@/components/header/Header'
-import Stay from '@/components/stay/Stay'
-import React from 'react'
+import Stay from "@/components/stay/Stay";
+import React from "react";
 
 const Cart = () => {
     return (
         <>
-            <Header />
-            <div className='container'>
+            <div className="container max-w-[1280x]">
                 <h2>Cart</h2>
-
             </div>
-            <Stay/>
-            <Footer/>
+            <Stay />
         </>
-    )
-}
+    );
+};
 
-export default Cart
+export default Cart;
