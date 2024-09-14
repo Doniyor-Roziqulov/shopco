@@ -71,7 +71,7 @@ const Hero = () => {
                         <img
                             className="absolute left-0 top-32 lg:left-auto lg:right-[500px] w-[50px] lg:top-[20px]"
                             src={vector}
-                            alt=""
+                            alt="a"
                         />
                     </div>
                 </div>
