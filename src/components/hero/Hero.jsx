@@ -47,19 +47,28 @@ const Hero = () => {
                                 </p>
                             </div>
                             <div className="w-[2px] border border-[#dad9d9] h-[74px]"></div>
-                            <div className=''>
-                                <h3 className='font-bold text-[54px] leading-[54px]'>30,000+</h3>
-                                <p className='pb-5 text-[16px] leading-[22.14px]'>Happy Customers</p>
+                            <div className="">
+                                <h3 className="font-bold text-[54px] leading-[54px]">
+                                    30,000+
+                                </h3>
+                                <p className="pb-5 text-[16px] leading-[22.14px]">
+                                    Happy Customers
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div className='flex relative '>
-                        <img className='w-[500px]' src={hero} alt="" />
-                        <img className='absolute right-[50px] top-10' src={vector} alt="" />
-                        <img className='relative right-[500px] w-[50px] top-[20px]' src={vector} alt="" />
-                    </div>
-                </div>
-                    </div>
+                    <div className="flex relative ">
+                        <img className="w-[500px]" src={hero} alt="" />
+                        <img
+                            className="absolute right-[50px] top-10"
+                            src={vector}
+                            alt=""
+                        />
+                        <img
+                            className="relative right-[500px] w-[50px] top-[20px]"
+                            src={vector}
+                            alt=""
+                        />
                     </div>
                 </div>
             </div>
