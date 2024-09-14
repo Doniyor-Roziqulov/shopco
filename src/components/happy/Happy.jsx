@@ -9,7 +9,7 @@ const Happy = () => {
 
     return (
         <>
-            <div className="flex container items-center justify-between">
+            <div className="flex container max-w-[1280px] items-center justify-between">
                 <h2 className="font-bold text-[48px] leading-[57px] mt-4  mb-4  ">
                     OUR HAPPY CUSTOMERS
                 </h2>
@@ -20,9 +20,6 @@ const Happy = () => {
                     slidesPerView={3}
                     centeredSlides={true}
                     spaceBetween={30}
-                    // pagination={{
-                    //    type: 'fraction',
-                    // }}
                     navigation={false}
                     loop={true}
                     modules={[Pagination, Navigation, Autoplay]}
