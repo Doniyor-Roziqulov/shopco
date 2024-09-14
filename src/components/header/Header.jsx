@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Baner from "../baner/Baner";
 import logo from "../../../public/logo.svg";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -8,6 +8,8 @@ import { LuShoppingCart } from "react-icons/lu";
 import { LuUserCircle2 } from "react-icons/lu";
 import { useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
+import { FaRegHeart } from "react-icons/fa";
+
 
 const Header = () => {
     const [data, setData] = useState(false);
@@ -71,14 +73,19 @@ const Header = () => {
                                 <SearchInput />
                             </li>
                             <li className="group   p-3 cursor-pointer">
-                                <Link>
+                                <NavLink to="/cart">
                                     <LuShoppingCart className="text-2xl group-hover:opacity-80 group-active:opacity-65 transition-all ease-in duration-65" />
-                                </Link>
+                                </NavLink>
+                            </li>
+                            <li className="group   p-3 cursor-pointer">
+                                <NavLink to="/wishlist">
+                                    <FaRegHeart className="text-2xl group-hover:opacity-80 group-active:opacity-65 transition-all ease-in duration-65" />
+                                </NavLink>
                             </li>
                             <li className="group p-3 cursor-pointer">
-                                <Link>
+                                <NavLink to="/admin">
                                     <LuUserCircle2 className="text-2xl group-hover:opacity-80 group-active:opacity-65 transition-all ease-in duration-65" />
-                                </Link>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
