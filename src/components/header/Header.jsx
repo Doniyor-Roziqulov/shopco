@@ -10,7 +10,6 @@ import { useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 
-
 const Header = () => {
     const [data, setData] = useState(false);
 
@@ -83,7 +82,7 @@ const Header = () => {
                                 </NavLink>
                             </li>
                             <li className="group p-3 cursor-pointer">
-                                <NavLink to="/admin">
+                                <NavLink to="">
                                     <LuUserCircle2 className="text-2xl group-hover:opacity-80 group-active:opacity-65 transition-all ease-in duration-65" />
                                 </NavLink>
                             </li>
