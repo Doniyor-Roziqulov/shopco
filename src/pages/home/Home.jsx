@@ -4,20 +4,17 @@ import Dress from "@/components/dress/Dress";
 import Hero from "@/components/hero/Hero";
 import Products from "@/components/products/Products";
 import React from "react";
-import 'swiper/css';
-import 'swiper/css/navigation';
 import Stay from "@/components/stay/Stay";
 
 const Home = () => {
     return (
         <div>
             <Hero />
-            <Animate/>
-            <Products/>
+            <Animate />
             <Products />
             <Dress />
             <Happy />
-            <Stay/>
+            <Stay />
         </div>
     );
 };

@@ -18,12 +18,11 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="cart" element={<Cart/>}/>
-                    <Route path="admin" element={<Admin/>}/>
-                    <Route path="wishlist" element={<Wishlist/>}/>
-                    <Route path="detail" element={<Detail/>}/>
+                    <Route path="cart" element={<Cart />} />
+                    <Route path="admin" element={<Admin />} />
+                    <Route path="wishlist" element={<Wishlist />} />
+                    <Route path="detail" element={<Detail />} />
                 </Route>
-                
             </Routes>
         </>
     );
