@@ -57,6 +57,12 @@ const Hero = () => {
                             </div>
                         </div>
                     </div>
+                    <div className='flex relative '>
+                        <img className='w-[500px]' src={hero} alt="" />
+                        <img className='absolute right-[50px] top-10' src={vector} alt="" />
+                        <img className='relative right-[500px] w-[50px] top-[20px]' src={vector} alt="" />
+                    </div>
+                </div>
                     <div className="flex relative justify-center lg:w-[50%]">
                         <img
                             className="w-[600px] lg:w-full object-cover"
