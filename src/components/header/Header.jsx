@@ -71,17 +71,17 @@ const Header = () => {
                             <li>
                                 <SearchInput />
                             </li>
-                            <li className="group   p-3 cursor-pointer">
+                            <li className="group   p-1 flex items-center cursor-pointer">
                                 <NavLink to="/cart">
                                     <LuShoppingCart className="text-2xl group-hover:opacity-80 group-active:opacity-65 transition-all ease-in duration-65" />
                                 </NavLink>
                             </li>
-                            <li className="group   p-3 cursor-pointer">
+                            <li className="group   p-1 flex items-center cursor-pointer">
                                 <NavLink to="/wishlist">
                                     <FaRegHeart className="text-2xl group-hover:opacity-80 group-active:opacity-65 transition-all ease-in duration-65" />
                                 </NavLink>
                             </li>
-                            <li className="group p-3 cursor-pointer">
+                            <li className="group p-1 pr-0 flex items-center cursor-pointer">
                                 <NavLink to="">
                                     <LuUserCircle2 className="text-2xl group-hover:opacity-80 group-active:opacity-65 transition-all ease-in duration-65" />
                                 </NavLink>
