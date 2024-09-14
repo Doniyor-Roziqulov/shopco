@@ -4,14 +4,16 @@ import Skleton from "../skleton/Skleton";
 import ReactStars from "react-stars";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFlip, Pagination, Navigation } from "swiper/modules";
+import { FaRegHeart } from "react-icons/fa";
+import { FiShoppingCart } from "react-icons/fi";
+import "./Product.css";
 
 const Product = ({ data, isLoading }) => {
     const ratingChanged = (newRating) => {
         console.log(newRating);
     };
-    // const { data, isLoading, error } = useGetProductQuery();
     const lists = data?.map((product) => (
-        <div className="" key={product.id}>
+        <div className="relative cartpro overflow-hidden" key={product.id}>
             <div className="bg-[#F0EEED] w-full h-[145px] min-[490px]:h-[200px] min-[600px]:h-[240px] lg:h-[260px] xl:h-[300px] overflow-hidden rounded-[20px]">
                 <Swiper
                     effect={"flip"}
@@ -46,6 +48,12 @@ const Product = ({ data, isLoading }) => {
             </div>
 
             <p className="text-2xl font-bold">$ {product.price}</p>
+            <button className="cart-btn absolute top-5 right-5 lg:right-[-50px] transition-all z-10 active:scale-125">
+                <FaRegHeart className="text-xl" />
+            </button>
+            <button className="cart-btn absolute top-14 right-5 lg:right-[-50px] transition-all z-10 active:scale-125">
+                <FiShoppingCart className="text-xl" />
+            </button>
         </div>
     ));
 
