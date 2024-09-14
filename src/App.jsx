@@ -2,9 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./pages/layout/Layout";
 import Home from "./pages/home/Home";
-import 'swiper/css';
-import 'swiper/css/navigation';
 import "swiper/css";
+import "swiper/css/navigation";
 import "swiper/css/effect-flip";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -18,12 +17,13 @@ const App = () => {
         <>
             <Routes>
                 <Route path="/" element={<Layout />}>
-                    <Route path="/" element={<Home />} />
+                    <Route index element={<Home />} />
+                    <Route path="cart" element={<Cart/>}/>
+                    <Route path="admin" element={<Admin/>}/>
+                    <Route path="wishlist" element={<Wishlist/>}/>
+                    <Route path="detail" element={<Detail/>}/>
                 </Route>
-                <Route path="cart" element={<Cart/>}/>
-                <Route path="admin" element={<Admin/>}/>
-                <Route path="wishlist" element={<Wishlist/>}/>
-                <Route path="detail" element={<Detail/>}/>
+                
             </Routes>
         </>
     );
