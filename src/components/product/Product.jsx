@@ -5,11 +5,11 @@ import ReactStars from "react-stars";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
-const Product = () => {
+const Product = ({ data, isLoading }) => {
     const ratingChanged = (newRating) => {
         console.log(newRating);
     };
-    const { data, isLoading, error } = useGetProductQuery();
+    // const { data, isLoading, error } = useGetProductQuery();
     const lists = data?.map((product) => (
         <div className="" key={product.id}>
             <div className="bg-[#F0EEED] w-full h-[145px] min-[490px]:h-[200px] min-[600px]:h-[240px] lg:h-[260px] xl:h-[300px] overflow-hidden rounded-[20px]">

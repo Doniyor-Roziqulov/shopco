@@ -22,9 +22,6 @@ const Happy = () => {
                   slidesPerView={3}
                   centeredSlides={true}
                   spaceBetween={30}
-                  // pagination={{
-                  //    type: 'fraction',
-                  // }}
                   navigation={false}
                   loop={true}
                   modules={[Pagination, Navigation, Autoplay]}
