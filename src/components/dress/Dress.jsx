@@ -23,9 +23,9 @@ const Dress = () => {
                                 Casual
                             </p>
                         </div>
-                        <div className="relative rounded-xl xl:h-80 bg-white col-span-2">
+                        <div className="relative rounded-xl xl:h-80 bg-white col-span-2 hover:scale-105 transition-all">
                             <img
-                                className="ml-auto w-10/12 h-full rounded-xl hover:scale-105 transition-all"
+                                className="ml-auto w-10/12 h-full rounded-xl"
                                 src={img2}
                                 alt=""
                             />
@@ -33,9 +33,9 @@ const Dress = () => {
                                 Formal
                             </p>
                         </div>
-                        <div className="relative rounded-xl xl:h-80 bg-white col-span-2">
+                        <div className="relative rounded-xl xl:h-80 bg-white col-span-2 hover:scale-105 transition-all">
                             <img
-                                className="ml-auto w-10/12 h-full rounded-xl hover:scale-105 transition-all"
+                                className="ml-auto w-10/12 h-full rounded-xl"
                                 src={img3}
                                 alt=""
                             />
@@ -43,9 +43,9 @@ const Dress = () => {
                                 Party
                             </p>
                         </div>
-                        <div className="relative w-full rounded-xl xl:h-80 bg-white">
+                        <div className="relative w-full rounded-xl xl:h-80 bg-white hover:scale-105 transition-all">
                             <img
-                                className="w-full h-full object-cover rounded-xl hover:scale-105 transition-all"
+                                className="w-full h-full object-cover rounded-xl"
                                 src={img4}
                                 alt=""
                             />
