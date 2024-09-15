@@ -82,7 +82,7 @@ const Header = () => {
                                 </NavLink>
                             </li>
                             <li className="group p-1 pr-0 flex items-center cursor-pointer">
-                                <NavLink to="">
+                                <NavLink to="/admin/create">
                                     <LuUserCircle2 className="text-2xl group-hover:opacity-80 group-active:opacity-65 transition-all ease-in duration-65" />
                                 </NavLink>
                             </li>
