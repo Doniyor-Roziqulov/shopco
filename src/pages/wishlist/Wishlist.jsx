@@ -1,4 +1,3 @@
-import Empty from "@/components/empty/Empty";
 import Stay from "@/components/stay/Stay";
 import React, { useEffect } from "react";
 
@@ -8,9 +7,7 @@ const Wishlist = () => {
     }, []);
     return (
         <>
-            <div>
-                <Empty />
-            </div>
+            <div></div>
             <Stay />
         </>
     );
