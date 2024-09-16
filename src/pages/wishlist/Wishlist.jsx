@@ -12,6 +12,7 @@ const Wishlist = () => {
     }, []);
     return (
         <>
+            <div></div>
             <div>
                 <div>
                     {wishlist.length > 0 ? (
