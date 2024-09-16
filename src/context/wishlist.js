@@ -1,7 +1,6 @@
 import { getStorage, saveStorage } from "@/helpers";
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const wishlist = createSlice({
     name: "wishlist",
     initialState: {
@@ -26,7 +25,7 @@ const wishlist = createSlice({
             state.value = [];
         },
     },
-})
+});
 
-export const {toggleWishlist, clearWishlist} =wishlist.actions
-export default wishlist.reducer
+export const { toggleWishlist, clearWishlist } = wishlist.actions;
+export default wishlist.reducer;

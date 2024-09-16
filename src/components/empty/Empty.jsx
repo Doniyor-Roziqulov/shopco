@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
 
-const Empty = () => {
-  return (
-    <div className=''>
-        <h2 className='text-center text-[48px]'>Sahifa bo`sh</h2>
-    </div>
-  )
-}
+const Empty = ({ url, text }) => {
+    return (
+        <div className="flex flex-col items-center">
+            <div className="w-[400px] h-[300px]">
+                <img
+                    className="w-full h-full object-contain"
+                    src={url}
+                    alt="empty"
+                />
+            </div>
+            <p className="font-bold text-2xl">{text} !</p>
+        </div>
+    );
+};
 
-export default Empty
+export default Empty;
