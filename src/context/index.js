@@ -3,8 +3,8 @@ import { api } from "./api";
 
 export const store = configureStore({
     reducer: {
-        // wishlist,
-        // cart,
+        // wishlist: wishlistSlice,
+        // cart: cartSlice,
         // token,
         // profile,
         [api.reducerPath]: api.reducer, // caching
