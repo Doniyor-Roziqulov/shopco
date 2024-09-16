@@ -14,6 +14,8 @@ import ReactStars from "react-stars";
 import { VscCheck } from "react-icons/vsc";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import Product from "@/components/product/Product";
+import { useDispatch } from "react-redux";
+import { addCart } from "@/context/cart";
 
 const Detail = () => {
     useEffect(() => {
@@ -27,6 +29,7 @@ const Detail = () => {
         limit: 4,
         page: 4,
     });
+    const dispatch = useDispatch();
 
     return (
         <>
@@ -125,7 +128,16 @@ const Detail = () => {
                                             <FiPlus className="text-xl" />
                                         </button>
                                     </div>
-                                    <button className="border text-white bg-black py-4 w-full rounded-full transition-all hover:bg-white hover:text-black hover:border-black">
+                                    <button
+                                        onClick={() =>
+                                            dispatch(
+                                                addCart({
+                                                    ...data,
+                                                    quantity: 1,
+                                                })
+                                            )
+                                        }
+                                        className="border text-white bg-black py-4 w-full rounded-full transition-all hover:bg-white hover:text-black hover:border-black">
                                         Add to Cart
                                     </button>
                                 </div>

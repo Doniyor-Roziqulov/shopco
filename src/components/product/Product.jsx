@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Skleton from "../skleton/Skleton";
 import ReactStars from "react-stars";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,22 +11,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleWishlist } from "@/context/wishlist";
 import { addCart } from "@/context/cart";
 
-
 const Product = ({ data, isLoading }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const wishlist = useSelector((state) => state.wishlist?.value || []);
-    const isInWishlist = (productId) =>
-        wishlist.some((item) => item.id === productId);
     const dispatch = useDispatch();
-    console.log(wishlist);
-
-    const cart = useSelector((state) => state.cart.value);
-    console.log(cart);
-
-    
+    let { wishlist, cart } = useSelector((state) => state);
+    wishlist = wishlist.value;
+    cart = cart.value;
 
     const lists = data?.map((product) => (
         <div className="relative cartpro overflow-hidden" key={product.id}>
@@ -61,12 +54,14 @@ const Product = ({ data, isLoading }) => {
             </div>
 
             <p className="text-2xl font-bold">$ {product.price}</p>
-            <button onClick={() => dispatch(toggleWishlist(product))} className="cart-btn absolute top-5 p-1 right-5 lg:right-[-50px] transition-all z-10 active:scale-125">
+            <button
+                onClick={() => dispatch(toggleWishlist(product))}
+                className="cart-btn absolute top-5 p-1 right-5 lg:right-[-50px] transition-all z-10 active:scale-125">
                 <FaRegHeart className="text-xl" />
             </button>
 
-
-            <button onClick={() => dispatch(addCart({ ...product, quantity: 1 }))}
+            <button
+                onClick={() => dispatch(addCart({ ...product, quantity: 1 }))}
                 className="cart-btn absolute top-14 p-1 right-5 lg:right-[-50px] transition-all z-10 active:scale-125">
                 <FiShoppingCart className="text-xl" />
             </button>
@@ -84,4 +79,3 @@ const Product = ({ data, isLoading }) => {
 };
 
 export default Product;
-
