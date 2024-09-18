@@ -24,22 +24,24 @@ const Product = ({ data, isLoading }) => {
     const lists = data?.map((product) => (
         <div className="relative cartpro overflow-hidden" key={product.id}>
             <Link to={`/product/${product.id}`}>
-                <div className="bg-[#F0EEED] w-full h-[145px] min-[420px]:h-[180px] min-[490px]:h-[200px] min-[600px]:h-[240px] lg:h-[260px] xl:h-[300px] overflow-hidden rounded-[20px]">
+                <div className="bg-[#F0EEED] w-full h-[145px] min-[420px]:h-[180px] min-[490px]:h-[200px] min-[600px]:h-[240px] lg:h-[260px] xl:h-[300px] overflow-hidden rounded-[20px] flex justify-center">
                     <Swiper
                         effect={"flip"}
                         grabCursor={true}
                         pagination={true}
                         navigation={false}
                         modules={[EffectFlip, Pagination, Navigation]}
-                        className="mySwiper bg-[#F0EEED] w-full min-[420px]:h-[180px] min-[600px]:h-[220px] lg:h-[300px] rounded-[20px]">
+                        className="mySwiper flex items-center justify-center bg-[#F0EEED] w-full min-[420px]:h-[180px] min-[600px]:h-[220px] lg:h-[300px] rounded-[20px]">
                         {product.url?.map((img, inx) => (
                             <SwiperSlide
                                 key={inx}
                                 className="flex items-center justify-center">
-                                <img
-                                    className="min-[420px]:h-[180px] min-[600px]:h-[220px] min-[600px]:w-[220px] w-[140px] h-[140px] min-[490px]:h-[180px] min-[490px]:w-[180px] lg:w-[240px] xl:w-[280px] xl:h-[280px] lg:h-[240px] object-contain hover:scale-105 transition-all"
-                                    src={img}
-                                />
+                                <div className="w-full flex justify-center">
+                                    <img
+                                        className="block min-[420px]:h-[180px] min-[600px]:h-[220px] min-[600px]:w-[220px] w-[140px] h-[140px] min-[490px]:h-[180px] min-[490px]:w-[180px] lg:w-[240px] xl:w-[280px] xl:h-[280px] lg:h-[240px] object-contain hover:scale-105 transition-all"
+                                        src={img}
+                                    />
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
